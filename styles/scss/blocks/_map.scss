@@ -1,0 +1,19 @@
+.map {
+}
+
+.map__row {
+  padding: 0 0 180px;
+  display: flex;
+  flex-direction: column;
+  gap: 88px;
+}
+
+@include mediaTablet {
+  .map__row {
+    row-gap: 25px;
+    padding: 0 0 180px;
+  }
+  .map__title {
+    margin-bottom: 20px;
+  }
+}

@@ -1,0 +1,55 @@
+.form {
+}
+.form__input {
+  height: 50px;
+  padding: 12px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: $white;
+  font-size: 14px;
+  transition: 0.2s ease-in;
+
+  &::placeholder {
+    color: $placeholder;
+  }
+
+  &:focus {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+}
+.form__privacy {
+  font-size: 13px;
+  color: $muted;
+  text-align: center;
+  line-height: 1.23;
+
+  &--bottom {
+    @include mediaTablet {
+      grid-row: 4;
+    }
+  }
+}
+.form__btn {
+  height: 50px;
+  padding: 12px;
+  text-align: center;
+  color: $white;
+  font-weight: 700;
+  background-color: $accent;
+  font-size: 16px;
+  transition: 0.2s ease-in;
+
+  &:hover {
+    background-color: saturate($accent, 20%);
+  }
+}
+
+@include mediaTablet {
+  .ctaQuestion__form {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+  }
+  .form__privacy {
+    grid-row-start: 4;
+  }
+}
